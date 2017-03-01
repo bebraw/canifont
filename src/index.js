@@ -1,8 +1,8 @@
-const browserslist = require('browserslist');
 const caniuse = require('caniuse-api');
 const combinations = require('combinations');
 
 module.exports = function calculateMinimumFonts({
+  // browserslist definition
   browsers,
   fonts = ['ttf', 'svg-fonts', 'woff', 'woff2'],
 }) {
@@ -12,7 +12,7 @@ module.exports = function calculateMinimumFonts({
       font,
     });
   });
-  const supportedBrowsers = getLowestVersions(browsers || browserslist());
+  const supportedBrowsers = getLowestVersions(browsers);
   const supportedFontsPerBrowser = Object.keys(supportedBrowsers).map((browserName) => {
     const browserVersion = supportedBrowsers[browserName];
 

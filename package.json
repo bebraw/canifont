@@ -2,6 +2,7 @@
   "name": "canifont",
   "version": "1.0.0",
   "description": "Figure out what fonts to use",
+  "bin": "bin/index.js",
   "main": "dist/index.js",
   "scripts": {
     "sync": "webpack-defaults",
