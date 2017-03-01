@@ -45,6 +45,11 @@
     "pre-commit": "^1.2.2",
     "webpack-defaults": "0.0.1"
   },
+  "jest": {
+    "testMatch": [
+      "**/*-test.js"
+    ]
+  },
   "pre-commit": "lint-staged",
   "lint-staged": {
     "*.js": [
