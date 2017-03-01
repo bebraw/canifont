@@ -8,7 +8,7 @@ module.exports = function canifont({
   // browserslist definition
   browsers,
   // possible fonts
-  fonts = ['ttf', 'svg-fonts', 'woff', 'woff2'],
+  fonts = ['woff2', 'woff', 'svg-fonts', 'ttf'],
   getSupport = caniuse.getSupport,
 }) {
   return solveFonts({
