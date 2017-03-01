@@ -1,4 +1,4 @@
-const getSupportedFonts = require('./get-supported-fonts.js');
+const getSupportedFonts = require('./get-supported-fonts');
 
 describe('getSupportedFonts', function () {
   it('returns supported fonts', function () {
