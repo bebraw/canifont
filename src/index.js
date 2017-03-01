@@ -9,13 +9,14 @@ module.exports = function calculateMinimumFonts({
   browsers,
   // possible fonts
   fonts = ['ttf', 'svg-fonts', 'woff', 'woff2'],
+  getSupport = caniuse.getSupport,
 }) {
   return solveFonts({
     browsers: getSupportedFontsPerBrowser({
       browsers: getLowestVersions(browsers),
       fonts: getSupportedFonts({
         fonts,
-        getSupport: caniuse.getSupport,
+        getSupport,
       }),
     }),
     fonts,
