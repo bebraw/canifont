@@ -1,6 +1,6 @@
 {
   "name": "canifont",
-  "version": "1.0.0",
+  "version": "0.0.1",
   "description": "Figure out what fonts to use",
   "bin": "bin/index.js",
   "main": "dist/index.js",
