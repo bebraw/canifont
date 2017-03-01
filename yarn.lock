@@ -935,10 +935,6 @@ colors@1.0.3:
   version "1.0.3"
   resolved "https://registry.yarnpkg.com/colors/-/colors-1.0.3.tgz#0433f44d809680fdeb60ed260f1b0c262e82a40b"
 
-combinations@^0.1.1:
-  version "0.1.1"
-  resolved "https://registry.yarnpkg.com/combinations/-/combinations-0.1.1.tgz#8a18faa7b972d0f962f7a87be1bb9a66c18cb8b2"
-
 combined-stream@^1.0.5, combined-stream@~1.0.5:
   version "1.0.5"
   resolved "https://registry.yarnpkg.com/combined-stream/-/combined-stream-1.0.5.tgz#938370a57b4a51dea2c77c15d5c5fdf895164009"

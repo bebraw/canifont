@@ -10,7 +10,7 @@ describe('canifont', function () {
     };
     const getSupport = () => supportedBrowsers;
     const fonts = ['ttf'];
-    const expected = [['ttf']];
+    const expected = ['ttf'];
 
     expect(canifont({
       browsers,
