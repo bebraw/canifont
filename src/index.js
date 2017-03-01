@@ -1,10 +1,10 @@
 const caniuse = require('caniuse-api');
 const getLowestVersions = require('./get-lowest-versions');
 const getSupportedFonts = require('./get-supported-fonts');
-const getSupportedFontsPerBrowser = require('./get-supported-fonts');
+const getSupportedFontsPerBrowser = require('./get-supported-fonts-per-browser');
 const solveFonts = require('./solve-fonts');
 
-module.exports = function calculateMinimumFonts({
+module.exports = function canifont({
   // browserslist definition
   browsers,
   // possible fonts
