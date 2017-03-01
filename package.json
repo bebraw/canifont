@@ -13,6 +13,7 @@
     "serve:dev": "nodemon $2 --exec babel-node",
     "lint": "eslint --cache src test",
     "security": "nsp check",
+    "pretest": "npm run lint",
     "test": "jest",
     "test:coverage": "jest --collectCoverageFrom='src/**/*.js' --coverage",
     "travis:test": "yarn run test",
@@ -25,8 +26,7 @@
   "license": "MIT",
   "dependencies": {
     "browserslist": "^1.7.5",
-    "caniuse-api": "^1.5.3",
-    "combinations": "^0.1.1"
+    "caniuse-api": "^1.5.3"
   },
   "devDependencies": {
     "babel-cli": "^6.23.0",

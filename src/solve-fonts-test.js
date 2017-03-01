@@ -9,7 +9,7 @@ describe('solveFonts', function () {
       },
     ];
     const fonts = ['ttf'];
-    const expected = [['ttf']];
+    const expected = ['ttf'];
 
     expect(solveFonts({
       browsers,
@@ -17,15 +17,35 @@ describe('solveFonts', function () {
     })).toEqual(expected);
   });
 
-  it('returns multiple solved fonts', function () {
+  it('returns the newest supported font', function () {
     const browsers = [
       {
         browser: 'chrome',
         supports: ['ttf', 'woff'],
       },
     ];
-    const fonts = ['ttf', 'woff'];
-    const expected = [['ttf'], ['woff']];
+    const fonts = ['woff', 'ttf'];
+    const expected = ['woff'];
+
+    expect(solveFonts({
+      browsers,
+      fonts,
+    })).toEqual(expected);
+  });
+
+  it('returns the minimum list of fonts to support all browsers', function () {
+    const browsers = [
+      {
+        browser: 'chrome',
+        supports: ['ttf', 'svg', 'woff', 'woff2'],
+      },
+      {
+        browser: 'safari',
+        supports: ['ttf', 'svg', 'woff'],
+      },
+    ];
+    const fonts = ['woff2', 'woff', 'ttf'];
+    const expected = ['woff2', 'woff'];
 
     expect(solveFonts({
       browsers,
