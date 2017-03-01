@@ -16,4 +16,20 @@ describe('solveFonts', function () {
       fonts,
     })).toEqual(expected);
   });
+
+  it('returns multiple solved fonts', function () {
+    const browsers = [
+      {
+        browser: 'chrome',
+        supports: ['ttf', 'woff'],
+      },
+    ];
+    const fonts = ['ttf', 'woff'];
+    const expected = [['ttf'], ['woff']];
+
+    expect(solveFonts({
+      browsers,
+      fonts,
+    })).toEqual(expected);
+  });
 });
