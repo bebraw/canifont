@@ -1,7 +1,7 @@
 {
   "name": "canifont",
   "version": "1.0.0",
-  "description": "",
+  "description": "Figure out what fonts to use",
   "main": "src/index.js",
   "scripts": {
     "test": "echo \"Error: no test specified\" && exit 1"
