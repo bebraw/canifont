@@ -13,6 +13,7 @@
     "serve:dev": "nodemon $2 --exec babel-node",
     "lint": "eslint --cache src test",
     "security": "nsp check",
+    "prepublish": "npm run build",
     "pretest": "npm run lint",
     "test": "jest",
     "test:coverage": "jest --collectCoverageFrom='src/**/*.js' --coverage",
