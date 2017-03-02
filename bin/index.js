@@ -1,3 +1,4 @@
+#!/usr/bin/env node
 // Checks against local browserslist
 const browserslist = require('browserslist');
 const canifont = require('../');
@@ -5,7 +6,9 @@ const canifont = require('../');
 main();
 
 function main() {
-  canifont({
-    browsers: browserslist(),
-  });
+  const browserDefinition = browserslist.readConfig('./browserslist').defaults;
+  const browsers = browserslist(browserDefinition);
+  const suitableFonts = canifont({ browsers });
+
+  console.log(suitableFonts); // eslint-disable-line no-console
 }
