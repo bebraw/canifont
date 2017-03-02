@@ -1,7 +1,7 @@
 #!/usr/bin/env node
 // Checks against local browserslist
 const browserslist = require('browserslist');
-const canifont = require('../');
+const canifont = require('../dist');
 
 main();
 
